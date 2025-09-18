@@ -32,7 +32,6 @@ namespace WeatherForecast
             });
 
             
-            
             // SQS
             var weatherDataQueue = new Queue(this, "WeatherDataQueue", new QueueProps
             {

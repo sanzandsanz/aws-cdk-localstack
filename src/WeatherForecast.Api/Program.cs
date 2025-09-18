@@ -47,10 +47,13 @@ if (builder.Environment.IsDevelopment())
         }
     ));
 }
+else
+{
+    builder.Services.AddAWSService<IAmazonDynamoDB>();
+    builder.Services.AddAWSService<IAmazonSQS>();
+    builder.Services.AddSingleton<IDynamoDBContext, DynamoDBContext>();
+}
 
-
-//builder.Services.AddAWSService<IAmazonDynamoDB>();
-//builder.Services.AddAWSService<IAmazonSQS>();
 builder.Services.AddAWSLambdaHosting(LambdaEventSource.HttpApi);
 
 var app = builder.Build();
