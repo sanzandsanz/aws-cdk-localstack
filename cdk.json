@@ -1,5 +1,5 @@
 {
-  "app": "dotnet run --project src/WeatherForecast/WeatherForecast.csproj",
+  "app": "dotnet run --project src/WeatherForecast.Cdk/WeatherForecast.Cdk.csproj",
   "watch": {
     "include": [
       "**"
